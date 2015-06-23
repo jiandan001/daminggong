@@ -1,0 +1,6 @@
+{
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "daminggong:page:ditu",
+    "title": "daminggong ditu",
+    "content": "<h1>ditu</h1>"
+}
