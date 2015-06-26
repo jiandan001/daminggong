@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>大明宫西安新楼盘家装方案中心</title>
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+<style>
+body {
+  background: url(/assets/images/西安.png);
+}
+.back-btn {
+  display:none;
+}
+</style>
+</head>
+
+<body>
+  <div class="title">
+    大明宫西安新楼盘家装方案中心<a class="back-btn" href="ditu.html">返回</a>
+  </div>
+  <div class="bmap"></div>
+  <script src="/assets/js/jquery-1.9.1.min.js"></script>
+  <script>
+
+  $(function() {
+
+    //
+    // Events
+    //
+
+    // Mouse interaction
+    //
+    var area = $(".bmap-area");
+    area.hover(function(){
+      $(this).addClass("bmap-area-hover");
+    }, function(){
+      $(this).removeClass("bmap-area-hover");
+    });
+
+    $(".bmap").on("click", ".bmap-area", function() {
+      var region_name = $(this).data("region");
+      var xiaoqu_name = $(this).data("xiaoqu");
+      if ( xiaoqu_name )
+      {
+        window.location.href = "xiaoqu.html#region="+region_name+"&xiaoqu="+xiaoqu_name;
+      }
+      else
+      {
+        goto(region_name);
+      }
+    });
+
+    // Debug
+    //
+    //document.addEventListener("click", printMousePos);
+
+    // Navigation
+    //
+    $(window).bind('hashchange', function() {
+      var region_name = get_params()["region"];
+      open_map(region_name);
+    });
+
+    //
+    // Start program
+    //
+
+    if ( get_params()["region"] )
+    {
+      open_map(get_params()["region"]);
+    }
+    else
+    {
+      open_map("西安");
+    }
+
+  });
+
+
+  // Convert lat and lon to absolute x,y position on screen.
+  //@TODO Add unittest for this function
+  function latlon2xy ( p_lat, p_lon )
+  {
+    // postion
+    var p1_x = 48.0;
+    var p1_y = 173.0;
+    var p1_lat = 108.700926;
+    var p1_lon = 34.359731;
+    var p2_x = 1335.0;
+    var p2_y = 729.0;
+    var p2_lat = 109.070596;
+    var p2_lon = 34.226597;
+    var p_x = ( (p_lat-p2_lat)*p1_x - (p_lat-p1_lat)*p2_x ) / ( p1_lat - p2_lat );
+    var p_y = ( (p_lon-p2_lon)*p1_y - (p_lon-p1_lon)*p2_y ) / ( p1_lon - p2_lon );
+    return {
+      "x": p_x,
+      "y": p_y
+    };
+  }
+
+  // Navigation to selected region.
+  function goto (region_name)
+  {
+    console.log("GOTO: " + region_name);
+    window.location.hash = "#region=" + region_name;
+  }
+
+  // Show all hot spot on selected region.
+  function open_map(region_name)
+  {
+    console.log("OPEN MAP: " + region_name);
+
+    var map_data_url = "/content/region.tidy.1.json";
+
+    // Whole city or simple region?
+    if ( region_name != "西安" )
+    {
+      // Show back button
+      $(".back-btn").show();
+
+      map_data_url = "/content/region/" + region_name + ".tidy.1.json";
+    }
+
+    // Load map data.
+    $.getJSON(map_data_url, function (data) {
+
+      // Refill map with new hot spot.
+      $(".bmap").html("");
+
+      $.each(data, function(index, value) {
+        if ( index.match(/^[A-Za-z]/) ) return;
+
+        var hotspot_name = index;
+        var loupan_count = value.total;
+
+        var lat = value.x;
+        var lon = value.y;
+        // Convert from lat and lon to absolute position on web page.
+        var xy = latlon2xy(lat, lon);
+
+        if ( region_name == "西安" )
+        {
+          var hotspot = $("<div/>", {
+            "data-region": hotspot_name
+          })
+            .addClass("bmap-area")
+            .css("left", xy.x+"px")
+            .css("top", xy.y+"px")
+            .append( $("<p/>").text(hotspot_name) )
+            .append( $("<p/>").text(loupan_count) )
+            .appendTo(".bmap");
+        }
+        else
+        {
+          var hotspot = $("<div/>", {
+            "data-region": region_name,
+            "data-xiaoqu": hotspot_name
+          })
+            .addClass("bmap-area")
+            .data("data-region", hotspot_name)
+            .css("left", xy.x+"px")
+            .css("top", xy.y+"px")
+            .append( $("<p/>").text(hotspot_name) )
+            .appendTo(".bmap");
+        }
+      });
+
+    }); //$.getJSON
+  }
+
+  function get_params()
+  {
+    var hash = top.location.hash.replace('#', '');
+    var params = hash.split('&');
+    var result = {};
+    for(var i = 0; i < params.length; i++){
+      var propval = params[i].split('=');
+      result[propval[0]] = propval[1];
+    }
+    return result;
+  }
+
+  //debug, get cursor position when mouse clicking.
+  function printMousePos(e) {
+      var cursorX = e.clientX;
+      var cursorY = e.clientY;
+      alert("X: " + cursorX + " Y: " + cursorY);
+  }
+  </script>
+</body>
+</html>

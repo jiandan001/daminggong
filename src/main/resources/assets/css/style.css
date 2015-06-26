@@ -1,0 +1,76 @@
+body {
+  /*background-color:black;
+  width:1345px;
+  height:750px;*/
+  width: 1920px;
+  height: 1080px;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, 'Microsoft YaHei', 'Hiragino Sans GB', STHeiti, SimSun;
+}
+.title {
+  background: black;
+  margin: 0px;
+  padding: 0px;
+  font-family:'Arial Negreta', 'Arial';font-size:32px; font-weight:700; color:white;
+}
+.back-btn {
+  color: black;
+  float: right;
+  background-image: url(../images/back.png);
+  font-size: 24px;
+  background-repeat: no-repeat;
+  text-decoration: inherit;
+  padding-left: 30px;
+  height: 40px;
+  padding-top: 8px;
+}
+
+/* ditu.php */
+
+.bmap-area {
+  position: absolute;
+  left: 600px;
+  top: 200px;
+  cursor: pointer;
+  width: 74px;
+  height: 40px;
+  padding: 20px 0 14px;
+  background: url(../images/mark32-1.png) no-repeat -92px -92px;
+
+  -webkit-user-select: none; 
+}
+.bmap-area-hover {
+  z-index: 9999;
+  background: url(./images/mark32-1.png) no-repeat left -92px;
+}
+.bmap-area p {
+  line-height: 20px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/* huxing.php */
+
+.row {
+  height: 270px;
+}
+.block {
+  float: left;
+  padding: 20px 10px;
+}
+.block img {
+  width: 200px;
+  height: 150px;
+}
+a {
+  color: #333;
+}
+a:hover {
+  color: #f60;
+}

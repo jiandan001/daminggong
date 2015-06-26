@@ -36,6 +36,7 @@
                           /assets;path:=/assets
                         </Sling-Bundle-Resources>
                         <Sling-Initial-Content>
+                          initial-content;overwrite:=true;uninstall:=true,
                           apps;path:=/apps;overwrite:=true;uninstall:=true,
                           content;path:=/content;overwrite:=true;uninstall:=true,
                         </Sling-Initial-Content>
