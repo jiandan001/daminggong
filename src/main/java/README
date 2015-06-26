@@ -1,0 +1,2 @@
+Empty dir to avoid this error when building:
+> [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.6.0:scr (generate-scr-scrdescriptor) on project org.spolo.daminggong: Execution generate-scr-scrdescriptor of goal org.apache.felix:maven-scr-plugin:1.6.0:scr failed: basedir /home/chenyang/source/jiandan001-daminggong/src/main/java does not exist -> [Help 1]
