@@ -3360,17 +3360,55 @@ window.onerror = function(msg, file_loc, line_no) {
 </body>
 </html>
 <script>
+function hereDoc(f) {
+  return f.toString().
+      replace(/^[^\/]+\/\*!?/, '').
+      replace(/\*\/[^\/]+$/, '');
+}
+ZIDINGYI_HTML = hereDoc(function() {/*!
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion-sgBill" href="#sgBill-自定义">
+                        家装公司自定义工程
+                        <small class="pull-right">(温馨提示:此项为家装公司增项内容，请咨询该装修公司)</small>
+                    </a>
+                </h4>
+            </div>
+            <div id="sgBill-自定义" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p class="text-center"><pre>
+1).水泥砂浆找平，每平方30元；
+2).贴石膏线，每米15元；
+3).石膏板隔墙，单面每平方80元，双面每平方110元；
+4).基层铲除，每平方6元；
+5).门窗拆除，一樘50元；
+6).新建隔墙，每平方140元；
+7).旧房瓷砖铲除，每平方35元；
+8).底盒安装，每个8元。</pre>
+                  </p>
+                </div>
+            </div>
+        </div>
+*/});
 jQuery(function() {
   jQuery("h1").css("margin-bottom", "90px");
   jQuery("#mobile-qr").append('<br><b style="font-size: 16px; line-height: 30px;">扫一扫，带走全景效果图。</b>');
-  jQuery("td > a, th > a").each(function(i,k){
-    if ( jQuery(k).html() == "点击查看" )
+  jQuery("td > a, th > a").each(function(k, v){
+    if ( jQuery(v).html() == "点击查看" )
     {
-      jQuery(k).attr("href", "mendiandizhi.html");
+      jQuery(v).attr("href", "mendiandizhi.html");
     }
     else
     {
-      jQuery(k).removeAttr("href");
+      jQuery(v).removeAttr("href");
+    }
+  });
+  jQuery(".panel.panel-default").each(function(k, v) {
+    var div = jQuery(v);
+    if( div.find("a").attr("href") == "#sgBill-水电及其安装与杂项其他" )
+    {
+      jQuery(ZIDINGYI_HTML).insertAfter(div);
     }
   });
 });
