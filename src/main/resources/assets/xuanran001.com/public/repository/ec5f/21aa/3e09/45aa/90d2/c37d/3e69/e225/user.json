@@ -1,0 +1,29 @@
+{
+  "user": {
+    "username": "_huangjing_40spolo.org",
+    "originalid": "585b470c-af5b-4b94-8913-a301224451e1",
+    "jobpath": "/content/users/_huangjing_40spolo.org/renderjobs/job9960",
+    "jobname": "job9960"
+  },
+  "debug": {
+    "ip": "192.168.0.175",
+    "jobid": "job20150511161156763094",
+    "create_scene_crash_flag": false,
+    "render_crash_flag": false,
+    "render_not_freed_memory_blocks_flag": true,
+    "render_cuda_error_flag": false,
+    "error_massage": "true"
+  },
+  "result": {
+    "v": 2,
+    "duration": 160696,
+    "主卫": [
+      {
+        "file": "0000.png"
+      },
+      {
+        "file": "0000.hdr"
+      }
+    ]
+  }
+}

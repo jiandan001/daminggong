@@ -1,0 +1,67 @@
+# 
+# ?? Glue Home 3D ?? - ??? ?? 10 19:23:09 CST 2015
+# http://www.sweethome3d.com/
+# 
+
+newmtl 8a18df1f-ad7d-4544-bd68-09ab3d2fbe95
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl wall_1_4
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl 831ec0b2-80ae-4796-a930-e3c0300dc29c
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl 1c956124-ebae-408c-95bb-a01c08e148a4
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl f045e9b5-277e-4523-9ff7-0db8b1e77e70
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl e4f6afeb-8522-4a9b-9613-0b0cadd0850f
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl 1aad298f-d51d-497e-aa3d-7e5d13c166f6
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0

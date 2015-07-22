@@ -1,0 +1,85 @@
+# 
+# ?? Glue Home 3D ?? - ??? ?? 10 12:59:56 CST 2015
+# http://www.sweethome3d.com/
+# 
+
+newmtl b8c70bf0-05af-4289-8b45-99e25720cf76
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl dc8a549a-74de-47b5-bf8c-660e8d432a8b
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl ce034113-e44c-4920-acf3-cbaddff98117
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl wall_3_16
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl 88335b2a-27b1-4ee8-ae28-f5ff3008e382
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl fe844705-fbe0-42eb-8281-66a9784c07b2
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl f9405fd8-a663-402d-bb2c-88da13f59e99
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl 7b8fd789-16a7-40bc-827e-78b8f3e97afc
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0
+
+newmtl 3fc8e360-528c-4971-908a-9344c072f261
+illum 1
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+Ns 0.0
+Ni 1
+d 1.0

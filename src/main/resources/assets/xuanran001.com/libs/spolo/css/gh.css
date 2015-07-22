@@ -1,0 +1,200 @@
+.mybody{
+    font: 12px "宋体",arial,sans-serif;
+}
+
+.container{
+    width: 960px;
+    margin: 3px auto;
+    border: 1px solid #ddd;
+}
+
+.search-box{
+    width: 600px;
+    margin: 10px auto 5px auto;
+}
+
+.search-input{
+    width: 100%;
+    max-width: 512px;
+    min-width: 200px;
+    height: 29px;
+}
+
+.search-btn{
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    height: 29px;
+    min-width: 54px;
+    text-align: center;
+    background-color: #4d90fe;
+}
+
+.userInfo {
+    float: right;
+    display: inline;
+    line-height: 33px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(175,215,237);
+}
+
+.category_selectedList{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    height: 30px;
+}
+
+.note_light{
+    color: #999;
+    display: inline-block;
+    padding: 5px;
+}
+
+.category_list{
+    border-bottom: dotted 1px #e0e0e0;
+    background: #faf5f2;
+    float: left;
+}
+
+.cat_head {
+    width: 100px;
+    float: left;
+}
+
+.note_bold {
+    width: 70px;
+    color: #666;
+    display: inline-block;
+    padding: 9px 10px 9px 20px;
+}
+
+.cat_body {
+    width: 860px;
+    background: #fff;
+    float: left;
+    max-height: 120px;
+    overflow: auto;
+    height: auto;
+}
+
+.filterItem {
+    float: left;
+    height: 31px;
+    border-right: 1px solid #d4d4d4;
+    cursor: pointer;
+}
+
+.filterLabel {
+    padding: 0 18px 0 10px;
+    display: inline-block;
+    position: relative;
+    line-height: 31px;
+    cursor: pointer;
+}
+
+.filterLabel #icon1{
+    background: url("/sites/default/files/xuanran001.lib.imageGroup.png") no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 2px;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    background-position: -380px -20px;
+}
+
+.filterLabel #icon2{
+    background: url("/sites/default/files/xuanran001.lib.imageGroup.png") no-repeat;
+    position: absolute;
+    top: 12px;
+    right: 6px;
+    width: 7px;
+    height: 8px;
+    overflow: hidden;
+    background-position: -180px -40px;
+}
+
+.waterfall_picList{
+    width: 222px;
+    box-shadow: 0 0 3px #CCC;
+    background: #FFF;
+    margin: 0 6px 12px 6px;
+    display: inline-block;
+}
+
+.waterfall_picThumbnail{
+    cursor: pointer;
+    height: 200px;
+    overflow: hidden;
+}
+
+.waterfall_picThumbnail img{
+    margin: 11px;
+    max-width: 200px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.waterfall_picDescription {
+    text-align: left;
+    padding: 5px 10px;
+    background: #F7F7F7;
+    margin-top: 1px;
+}
+
+.page-btn{
+    text-align: right;
+    font-size: small;
+    font-family: cursive;
+    margin: 2px 20px;
+    cursor: pointer;
+}
+
+//控制加载图标
+.ball {
+    background-color: rgba(0,0,0,0);
+    border:5px solid rgba(0,183,229,0.9);
+    opacity:.9;
+    border-top:5px solid rgba(0,0,0,0);
+    border-left:5px solid rgba(0,0,0,0);
+    border-radius:50px;
+    box-shadow: 0 0 35px #2187e7;
+    width:50px;
+    height:50px;
+    margin:0 auto;
+    -moz-animation:spin .5s infinite linear;
+    -webkit-animation:spin .5s infinite linear;
+}
+
+.ball1 {
+    background-color: rgba(0,0,0,0);
+    border:5px solid rgba(0,183,229,0.9);
+    opacity:.9;
+    border-top:5px solid rgba(0,0,0,0);
+    border-left:5px solid rgba(0,0,0,0);
+    border-radius:50px;
+    box-shadow: 0 0 15px #2187e7; 
+    width:30px;
+    height:30px;
+    margin:50px auto;
+    -moz-animation:spinoff .5s infinite linear;
+    -webkit-animation:spinoff .5s infinite linear;
+}
+
+@-moz-keyframes spin {
+    0% { -moz-transform:rotate(0deg); }
+    100% { -moz-transform:rotate(360deg); }
+}
+@-moz-keyframes spinoff {
+    0% { -moz-transform:rotate(0deg); }
+    100% { -moz-transform:rotate(-360deg); }
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform:rotate(0deg); }
+    100% { -webkit-transform:rotate(360deg); }
+}
+@-webkit-keyframes spinoff {
+    0% { -webkit-transform:rotate(0deg); }
+    100% { -webkit-transform:rotate(-360deg); }
+}
