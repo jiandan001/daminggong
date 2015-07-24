@@ -5551,5 +5551,12 @@ jQuery(function() {
       jQuery(ZIDINGYI_HTML).insertAfter(div);
     }
   });
+  jQuery("td").each(function(k, v) {
+    var td = jQuery(v);
+    if ( td.text() == "包含墙面找平、贴布刷基膜等清理基层工序，满刮两遍腻子，厚度3mm以内，每次刮腻子厚度不超过1mm，用砂纸打磨。批灰后内墙底漆一遍，内墙乳胶漆两遍。" )
+    {
+      td.text("1、含墙面批刮腻子；2、墙面清理干净，无浮尘；3、刮腻子2-3遍，砂纸打磨平整；4、阴阳角顺直；5、清理原墙面浮灰，滚涂乳胶漆，乳胶漆甲方提供。");
+    }
+  })
 });
 </script>
