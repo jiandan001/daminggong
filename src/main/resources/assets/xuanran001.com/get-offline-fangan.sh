@@ -179,7 +179,7 @@ EOF
   count=`wc -l "${mddz_name}.txt" | sed "s/${mddz_name}\.txt//"`
 
   # clear temp text
-  #rm "${mddz_name}.txt"
+  rm "${mddz_name}.txt"
 
   cat << EOF >> $mddz_html
   ],
@@ -199,9 +199,9 @@ mddz_html="mendiandizhi.html"
 
 #region="debug"
 #region="default"
-#region="北大明宫家居城"
+region="北大明宫家居城"
 #region="北大明宫批发商城"
-region="南大明宫家居城"
+#region="南大明宫家居城"
 #region="西大明宫家居城"
 
 if [ $region = "debug" ]; then
@@ -235,7 +235,6 @@ elif [ $region = "南大明宫家居城" ]; then
 elif [ $region = "北大明宫家居城" ]; then
   #north
   uuids=(
-  bcd1bcd3-87e5-4c57-89a5-33c34c3bea1f
   19597e49-9191-482a-ac38-db752a2510e0
   96aef0a4-c51e-4172-9e4a-165ca9c57eed
   7dd5d070-b8cf-469a-b8fc-044381b24136
