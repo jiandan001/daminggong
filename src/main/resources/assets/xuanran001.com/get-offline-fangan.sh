@@ -169,7 +169,7 @@ EOF
   fi
 
   mddz_name="${1}商户信息"
-  soffice --headless --convert-to txt:text "../../../../../attachment/西安大明宫现合作商户信息/${mddz_name}.doc"
+  soffice --headless --convert-to txt:Text "../../../../../attachment/西安大明宫现合作商户信息/${mddz_name}.doc"
   sed -i '1d' "${mddz_name}.txt"
   sed -i '/^\s*$/d' "${mddz_name}.txt"
   awk -F咨询电话： '{print "{\"name\":\""$1"\",\"tel\":\""$2"\",\"addr\":\""$1"\",\"id\":\"\"},"}' "${mddz_name}.txt" >> $mddz_html
